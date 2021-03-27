@@ -28,7 +28,7 @@ export WEB3_INFURA_PROJECT_ID=<YOUR-PROJECT-ID>
 export INFURA_MAINNET_URI=https://mainnet.infura.io/v3
 ```
 Note: at the time of this writing, the Infura mainnet can be accessed over HTTP with the above URI. However, you'll want to double-check this is what is provided in your project's account.
-####Step 4: Check your wallet's balance of Ether
+###Step 4: Check your wallet's balance of Ether
 ```
 export CRYPTO_WALLET=0x7829e7bDc86dEc3f00403f7E6b58aa8d42d86cF7
 python get_address_balance.py $WEB3_INFURA_PROJECT_ID $CRYPTO_WALLET $INFURA_MAINNET_URI
@@ -41,9 +41,8 @@ Balance: 0.01179221 ether
 If you expect to find a balance in your wallet and you find a 0 result.
 There are at least 2 issues to consider:
 1. If your wallet is on an exchange such as Coinbase, you will likely not find it on the blockchain. Validate this by searching for your wallet on [etherscan.io](https://etherscan.io/).
-2. If you have decided to implement your own geth client locally, the local client is likely still syncing the blockchain. 
+2. If you have decided to implement your own geth client locally, the local client is likely still syncing the blockchain. This will take a significant amount of time (maybe multiple days).
 
 ##Future
-#Creating a wallet:
+###Creating a wallet:
 https://ethereum.stackexchange.com/questions/32940/how-can-i-generate-a-wallet-in-python/33123
-```
