@@ -1,5 +1,5 @@
 # Toythereum
-A simple python implementation useful for checking a crypto wallets ethereum balance on the mainnet. This tutorial leverages the Web3.py [library](https://web3py.readthedocs.io/en/latest/quickstart.html).
+A simple python implementation useful for checking a crypto wallet's ether balance on the mainnet. This tutorial leverages the Web3.py [library](https://web3py.readthedocs.io/en/latest/quickstart.html).
 ## Getting Started
 Ensure your development environment is running Python3. For best results I recommend running a python virtual machine (see instructions below).
 
@@ -24,7 +24,7 @@ This tutorial wastes no time and leverages an API provider called Infura.io. Vis
 
 Once you have your PROJECTID and ENDPOINT, set these as local environment variables:
 ```
-export WEB3_INFURA_PROJECT_ID=<YOUR-PROJECT-ID>
+export INFURA_PROJECT_ID=<YOUR-PROJECT-ID>
 export INFURA_MAINNET_URI=https://mainnet.infura.io/v3
 ```
 &#8593; be sure not to add the trailing `/` to this URL
@@ -33,7 +33,7 @@ Note: at the time of this writing, the Infura mainnet can be accessed over HTTP 
 ### Step 4: Check your wallet's balance of Ether
 ```
 export CRYPTO_WALLET=0x7829e7bDc86dEc3f00403f7E6b58aa8d42d86cF7
-python get_address_balance.py $WEB3_INFURA_PROJECT_ID $CRYPTO_WALLET $INFURA_MAINNET_URI
+python get_address_balance.py $INFURA_PROJECT_ID $CRYPTO_WALLET $INFURA_MAINNET_URI
 
 Crypto Address: 0x7829e7bDc86dEc3f00403f7E6b58aa8d42d86cF7
 Balance: 0.01179221 ether
@@ -43,7 +43,7 @@ Balance: 0.01179221 ether
 If you expect to find a balance in your wallet and you find a 0 result.
 There are at least 2 issues to consider:
 1. If your wallet is on an exchange such as Coinbase, you will likely not find it on the blockchain. Validate this by searching for your wallet on [etherscan.io](https://etherscan.io/).
-2. If you have decided to implement your own geth client locally, the local client is likely still syncing the blockchain. This will take a significant amount of time (maybe multiple days).
+2. If you have decided to implement your own geth client locally, the local client is likely still syncing the blockchain. This will take a significant amount of time (maybe multiple days). An informative [read](https://github.com/ethereum/go-ethereum/issues/14338#issuecomment-490054375).
 
 ## Future
 ### Creating a wallet:
