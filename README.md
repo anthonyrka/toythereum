@@ -27,6 +27,8 @@ Once you have your PROJECTID and ENDPOINT, set these as local environment variab
 export WEB3_INFURA_PROJECT_ID=<YOUR-PROJECT-ID>
 export INFURA_MAINNET_URI=https://mainnet.infura.io/v3
 ```
+&#8593; be sure not to add the trailing `/` to this URL
+
 Note: at the time of this writing, the Infura mainnet can be accessed over HTTP with the above URI. However, you'll want to double-check this is what is provided in your project's account.
 ### Step 4: Check your wallet's balance of Ether
 ```
